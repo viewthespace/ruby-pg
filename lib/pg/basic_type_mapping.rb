@@ -129,6 +129,8 @@ module PG::BasicTypeRegistry
 			SQL
 		end
 
+		result = result.to_a
+
 		[
 			[0, :encoder, PG::TextEncoder::Array],
 			[0, :decoder, PG::TextDecoder::Array],
